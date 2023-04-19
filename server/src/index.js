@@ -1,38 +1,15 @@
-const http = require("http");
-require('dotenv').config(); // para usar el archivo .env
-// const data = require("./utils/data"); // tarea 1
-const getCharById = require("./controllers/getCharById");
+const express = require("express");
+const morgan  = require("morgan");
+const server = express();
+const router = require("./routes");
 
-// tarea 1 ------------------------------------------- (WEB SERVER)
-// http.createServer((req, res) =>{
-//     res.setHeader('Access-Control-Allow-Origin', '*');
-    
-//     const {url} = req;
-//     if(url.includes("rickandmorty/character/")){
-//         const id = Number(url.split("/").at(-1));
-//         const character = data.find((char)=> char.id === id);
-        
-//         if(character){
-//             res.writeHead(200, {"Content-Type": "application/json"});
-//             return res.end(JSON.stringify(character));
-//         }else{
-//             res.writeHead(404, {"Content-Type": "application/json"});
-//             return res.end(JSON.stringify({error: "Characyer not found"}));
-//         }
-//     }
+require("dotenv").config();
+const PORT = process.env.PORT || 3001 ;
 
-// }).listen(3001, "localhost")
+server.use(express.json());
+server.use(morgan("dev"))
+server.use(router);
 
-// tarea 2 ------------------------------------------- (PROMISE)
-
-http.createServer((req, res) =>{
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    const {url} = req;
-    
-    if(url.includes("/rickandmorty/character")){
-        const id = Number(url.split("/").at(-1));
-        // res.end("holi");
-        getCharById(res, id);
-    };
-
-}).listen(3001, "localhost")
+server.listen(PORT, () => {
+   console.log('Server raised in port: ' + PORT);
+});
