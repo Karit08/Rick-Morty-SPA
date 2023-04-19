@@ -1,14 +1,18 @@
-const express = require("express");
-const morgan  = require("morgan");
-const server = express();
-const router = require("./routes");
-
 require("dotenv").config();
 const PORT = process.env.PORT || 3001 ;
 
-server.use(express.json());
-server.use(morgan("dev"))
-server.use(router);
+const express = require("express");
+const morgan  = require("morgan");
+const cors = require("cors");
+
+const server = express();
+const router = require("./routes");
+
+server.use(express.json()); // transfoma en Objeto JS
+server.use(morgan("dev")); //imprime en consola que request hacemos
+server.use(cors());
+
+server.use(router); // PRINCIPAL ******************************************
 
 server.listen(PORT, () => {
    console.log('Server raised in port: ' + PORT);
