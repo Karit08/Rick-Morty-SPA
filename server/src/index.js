@@ -1,5 +1,6 @@
 const http = require("http");
-const data = require("./utils/data");
+require('dotenv').config(); // para usar el archivo .env
+// const data = require("./utils/data"); // tarea 1
 const getCharById = require("./controllers/getCharById");
 
 // tarea 1 ------------------------------------------- (WEB SERVER)
