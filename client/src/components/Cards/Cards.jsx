@@ -1,8 +1,9 @@
 import Card from '../Card/Card';
+import style from './Cards.module.css';
 
 export default function Cards(props) {
    return (
-      <div>
+      <div className={style.conteinerCard}>
          {
             props.characters.length ? (props.characters.map(c =>{
                return (

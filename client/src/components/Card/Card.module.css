@@ -1,8 +1,9 @@
 .card{
-    background: red;
-    /* width: 350px;
-    height: 500 px;  */
-    /* border: 1rem solid; */
+    /* background: red; */
+    width: 350 px;
+    height: 500 px;
+    border: .01rem solid;
+    border-color: aquamarine;
 }
 
 .button{
