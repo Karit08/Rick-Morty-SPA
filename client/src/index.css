@@ -138,15 +138,51 @@ table {
 }
 
 .header{
+    margin-top: 0;
     width: 100%;
+    height: 5rem;
     overflow: hidden;
     background:#69306d;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .wrapper{
     width: 85%;
     max-width: 1500px;
     margin: auto;
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+
+.logo{
+    color: #f2f2f2;
+    line-height: 100px;
+    float: left;
+    font-size: 1rem;
+}
+
+.nav{
+    float: right;
+    line-height: 140px;
+    /* font-size: 1.2rem; */
+}
+
+.a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.a:hover{
+    background: #e89ac7;
+    border-radius: 50px;
 }
