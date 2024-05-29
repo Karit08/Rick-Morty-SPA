@@ -8,6 +8,7 @@ export default function Cards(props) {
             props.characters.length ? (props.characters.map(c =>{
                return (
                   <Card
+                     key={c.id}
                      id={c.id}
                      name={c.name}
                      status={c.status}

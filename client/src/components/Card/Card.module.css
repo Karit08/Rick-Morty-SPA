@@ -1,11 +1,35 @@
-.card{
-    /* background: red; */
+.card {
+    background: linear-gradient(rgba(151, 206, 76, 0.7), rgba(151, 206, 76, .7));
     width: 350 px;
-    height: 500 px;
-    border: .01rem solid;
-    border-color: aquamarine;
+    height: 600 px;
+    /* border-color: #97ce4c; */
+    border-radius: .5rem;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: smaller;
+    position: relative;
 }
 
-.button{
+.button {
     color: red;
+    background-color: #f0e14a;
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    right: 0px;
+    top: 0px;
+    border-radius: .5rem;
+    border: none;
+    margin: .2rem;
+}
+
+.name{
+    background-color: #f0e14a;
+    height: 1rem;
+    width: 150px;
+    position: absolute;
+    left: 0px;
+    top: 17rem;
 }
