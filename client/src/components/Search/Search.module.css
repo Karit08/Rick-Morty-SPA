@@ -1,3 +1,8 @@
+.search{
+    justify-content: center;
+    align-self: center;
+}
+
 .input{
     background: linear-gradient(rgba(151, 206, 76, 0.4), rgba(151, 206, 76, .8));
     border-radius: .5rem;
